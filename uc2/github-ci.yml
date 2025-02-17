@@ -1,0 +1,79 @@
+name: BRKOPS Pipeline
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  Build:
+    runs-on: 
+      - macos
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.12"
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip3 install flake8 pytest pyats genie 
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+  Pre-check:
+    needs: Build
+    runs-on: 
+      - macos  
+    steps:
+    - name: Run Pre-Checks
+      run: |
+        pwd
+        ls -ltr
+        cd uc2/demo/
+        python sh_cmds.py
+        ls -ltr
+  Create-Vlan:
+    needs: Pre-check
+    runs-on: 
+      - macos  
+    steps:
+    - name: Create VLAN
+      run: |
+        pwd
+        ls -ltr
+        cd uc2/demo/
+        python create_vlan.py
+        ls -ltr
+  Post-check:
+    needs: Create-Vlan
+    runs-on: 
+      - macos  
+    steps:
+    - name: Run Post-Checks
+      run: |
+        pwd
+        cd uc2/demo/
+        python sh_cmds.py
+        ls -ltr
+  Diff-Compare:
+    needs: Post-check
+    runs-on: 
+      - macos  
+    steps:
+    - name: Validate VLAN Creation
+      run: |
+        pwd
+        cd uc2/demo/
+        chmod +x diff_compare.sh
+        ./diff_compare.sh
+        ls -ltr
+  Cleanup:
+    needs: Diff-Compare
+    runs-on: 
+      - macos  
+    steps:
+    - name: Clean up
+      run: |
+        pwd
+        cd uc2/demo/
+        rm command_outputs*
+        ls -ltr

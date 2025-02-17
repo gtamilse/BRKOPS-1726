@@ -11,7 +11,7 @@ The objective of the code in the `uc1` directory is to connect to a network devi
     ```
 
 ## Pre-requisites
-1. **Python 3.12: Ensure you have Python 3.12 installed on your system.
+1. **Python 3.12**: Ensure you have Python 3.12 installed on your system.
 2. **Requirements**: Install the Genie and PyATS libraries for network automation:
     ```sh
     pip install pyats genie
@@ -39,4 +39,3 @@ The script uses Python's logging module to provide detailed debug information. L
 ## Notes
 - Ensure the device credentials and IP addresses in the [testbed.yml](./testbed.yml) file are correct.
 - The script handles connection and command execution errors gracefully, logging any issues encountered.
-

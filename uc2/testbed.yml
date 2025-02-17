@@ -1,0 +1,42 @@
+testbed:
+  name: myTestbed
+devices:
+  FE1:
+    type: switch
+    os: iosxe
+    credentials:
+      default:
+        username: cisco
+        password: Cisco123
+      enable:
+        password: Cisco123
+    connections:
+      defaults:
+        class: 'unicon.Unicon'
+      vty:
+        protocol: ssh
+        ip: 10.1.1.1
+        proxy: wsl
+  dnac:
+    type: generic
+    os: linux
+    credentials:
+      default:
+        username: admin
+        password: Cisco123
+    connections:
+      rest:
+        protocol: https
+        ip: 192.16.1.1
+  wsl:
+    type: generic
+    os: windows
+    credentials:
+      default:
+        username: admin
+        password: Cisco123
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.16.1.2
+        port: '22'
