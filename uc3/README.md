@@ -47,9 +47,9 @@ The objective of the code in the `uc3` directory is to interact with the Cisco C
 - Sample User Queries
     - "what does the site topology look like currently"
     - "pretty print the site-topology details"
-    - " get site health for id "eed5ccc3-d76f-46e2-9d8d-97624f5418ac"
-    - "Get me the device count."
-    - "Get network devices"
+    - "get site health for id "ee3-d6f-4e2-8d-92ac"
+    - "get me the device count"
+    - "get network devices"
     - "what is device software version"
 
 ## Notes
