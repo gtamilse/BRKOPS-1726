@@ -1,0 +1,70 @@
+[
+    {
+    "URL": "/dna/system/api/v1/auth/token",
+    "Name": "Authentication"
+    },
+    {
+    "URL": "/dna/intent/api/v1/task/{task_id}",
+    "Name": "Task Status"
+    },
+    {
+    "URL": "/dna/intent/api/v1/network-health",
+    "Name": "Network Health, Health Score, Monitor"
+    },
+    {
+    "URL": "/dna/intent/api/v1/client-health",
+    "Name": "Client Health"
+    },
+    {
+    "URL": "/dna/intent/api/v1/site-health",
+    "Name": "Site Health"
+    },
+    {
+    "URL": "/dna/intent/api/v1/site/count",
+    "Name": "Site Count"
+    },
+    {
+    "URL": "/dna/intent/api/v1/site",
+    "Name": "Site List, Site IDs and Site Name"
+    },
+    {
+    "URL": "/dna/intent/api/v1/membership/{site_id}",
+    "Name": "Site Devices, Site ID details"
+    },
+    {
+    "URL": "/dna/intent/api/v1/site/{site_id}/health",
+    "Name": "Device Health by Site, Building Name"
+    },
+    {
+    "URL": "/dna/intent/api/v1/discovery/{discovery_id}/network-device",
+    "Name": "Discovered Devices"
+    },
+    {
+    "URL": "/dna/intent/api/v1/network-device/<device_id>",
+    "Name": "Device by ID"
+    },
+    {
+    "URL": "/dna/intent/api/v1/network-device/count",
+    "Name": "Devices Count"
+    },
+    {
+    "URL": "/dna/intent/api/v1/network-device",
+    "Name": "Device List, Network Devices, Device ID, Platform ID"
+    },
+    {
+    "URL": "/dna/intent/api/v1/topology/physical-topology",
+    "Name": "Physical Topology"
+    },
+    {
+    "URL": "/dna/intent/api/v1/diagnostics/system/health",
+    "Name": "Overall System Health"
+    },
+    {
+    "URL": "/diagnostics/system/performance/history",
+    "Name": "Overall System Performance History"
+    },
+    {
+    "URL": "/dna/intent/api/v1/topology/site-topology",
+    "Name": "Site Topology"
+    }
+]
