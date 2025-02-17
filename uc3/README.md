@@ -17,7 +17,7 @@ The objective of the code in the `uc3` directory is to interact with the Cisco C
     ```
 5. Enter your network-related queries in the Streamlit interface; this will initiate the Agentchain to retrieve information from Catalyst Center.
 
-![Streamlit_User_Interface](../brkops-streamlit-p1.png)
+![Streamlit_User_Interface](./brkops-streamlit-p1.png)
 
 ## Pre-requisites
 1. **Python 3.x**: Ensure you have Python 3.x installed on your system.
